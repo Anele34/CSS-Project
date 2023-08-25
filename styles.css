@@ -1,0 +1,94 @@
+/* Reset some default browser styling */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic layout using CSS Grid */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer{
+ 
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframe animation for button hover effect */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* CSS Variables for dynamic theming */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+}
+
+/* Gradients for background */
+body {
+    background: linear-gradient(to bottom, #f9f9f9, #ddd);
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        grid-template-rows: auto 1fr auto;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+
+
+/* Blend mode for header background */
+    header {
+        background: linear-gradient(to right, #2681e1, #00bcd4);
+        mix-blend-mode: multiply;
+    }
+
+/* Clipping and masking for main content */
+.content {
+    padding: 40px;
+    background: linear-gradient(to bottom, #f9f9f9, #ddd);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    mask-image: radial-gradient(circle at top right, transparent 20%, black 80%);
+}
+
